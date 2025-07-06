@@ -48,6 +48,23 @@ import { useAppStore } from "../stores/appStore";
 import { useToast } from "../hooks/use-toast";
 import { UserProfileResponse } from "../models";
 
+
+/**
+ * TODOS: User own profile
+ * - Hide we met and remember button from user's own profile
+ * - Display real data from sign up
+ * - Remove edit button that doesn't work
+ * - make the funcky sticky notes show the full data
+ */
+
+/**
+ * TODOS: User viewsing other people profiles
+ * - Hide QR code button
+ * - remove we met and remember buttons ONLY FROM HEADER
+ * - Remove edit button that doesn't work
+ * - make the funcky sticky notes show the full data
+ */
+
 /**
  * Interface for user profile data used in the component
  */

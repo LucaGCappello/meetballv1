@@ -111,12 +111,13 @@ const customStyles = `
 /**
  * 
  * TODOS:
- * - I can help button styles when user has already clicked it
+ *  - Make names and avatars of people who interacted go to their profiles
  * - toggle interactions (when user wants to change their mind)
+ * - prevent same user to interact multiple times
+ * - I can help button styles when user has already clicked it
  * - improve loading states and error handling (now sometimes the interactions doesn't show and need to refresh)
  * - or there is a delay until the interactions show (need loading state)
  * - connect the message button to the chat (when someone interacts user should be able to start chat with them)
- * - prevent same user to interact multiple times
  * - update interactions in the UI immediately after they occur
  */
 /**

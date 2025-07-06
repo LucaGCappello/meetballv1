@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { cn } from "../lib/utils";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -9,33 +9,24 @@ import { useSimpleImageUpload, ImageValidation } from "../hooks/useSimpleImageUp
 
 import {
   XIcon,
-  ImageIcon,
   CalendarIcon,
   MapPinIcon,
   UsersIcon,
   BuildingIcon,
-  TagIcon,
-  EyeIcon,
   LockIcon,
   PencilIcon,
   PlusIcon,
   UploadIcon,
   SearchIcon,
   LinkIcon,
-  Edit2Icon,
   FileTextIcon
 } from "lucide-react";
 import { useCreateEventApiV1EventsPost } from "../api-client/api-client";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Input } from "../components/ui/input";
-import { Textarea } from "../components/ui/textarea";
 import {
-  Select,
-  SelectContent,
   SelectItem,
-  SelectTrigger,
-  SelectValue,
 } from "../components/ui/select";
 import {
   Form,
@@ -46,7 +37,7 @@ import {
   FormLabel,
   FormMessage,
 } from "../components/ui/form";
-import { LocationInput, LocationData } from "../components/ui/location-input";
+import { LocationInput } from "../components/ui/location-input";
 import { ClickableInput } from "../components/ui/clickable-input";
 import { ClickableSelect } from "../components/ui/clickable-select";
 import {
@@ -63,7 +54,13 @@ import { useAuth } from "../providers";
 import { useAppStore } from "../stores/appStore";
 import { useToast } from "../hooks/use-toast";
 import { generateBestGeometricImage } from "../utils/geometricImageGenerator";
-
+/**
+ * TODOS:
+ * - Gatekeep event creation and implement access code features
+ * - attach community selection to event creation
+ * - Display real data from community name
+ * - Private events should work
+ */
 /**
  * Form validation schema using Zod
  */

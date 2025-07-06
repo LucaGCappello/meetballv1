@@ -15,6 +15,11 @@ import { ParticipantRole, ParticipantStatus } from "../api-client/models";
 import { openLocationInGoogleMaps } from "../utils/googleMaps";
 
 /**
+ * TODOS:
+ * Sort events (today)
+ */
+
+/**
  * Event interface with banner image support
  */
 interface Event {

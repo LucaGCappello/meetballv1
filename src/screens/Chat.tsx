@@ -21,7 +21,8 @@ import { useAppStore } from "../stores/appStore";
 import { useAuth } from "../providers";
 
 /**
- * Chat screen component for individual conversations
+ * TODOS:
+ * - Header shows unknown when you send the first message
  */
 export const Chat: React.FC = () => {
   const { id } = useParams<{ id: string }>();

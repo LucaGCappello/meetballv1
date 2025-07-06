@@ -118,14 +118,15 @@ export const Header: React.FC = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="w-[40px] h-[40px] bg-[#e9e6d9] rounded-full p-0"
+            className="w-[100px] h-[40px] bg-[#e9e6d9] rounded-full p-0 flex gap-1"
             onClick={() => navigate("/events")}
             title="Create Event"
           >
+            Events
             <Building2Icon className="w-5 h-5" />
           </Button>
           
-          <Button
+          {/* <Button
             variant="ghost"
             size="icon"
             className="w-[46px] h-[46px] bg-[#e9e6d9] rounded-full p-0"
@@ -136,7 +137,7 @@ export const Header: React.FC = () => {
             title="Search"
           >
             <SearchIcon className="w-5 h-5" />
-          </Button>
+          </Button> */}
         </div>
       ) : (
         <div className="w-[46px]" />
