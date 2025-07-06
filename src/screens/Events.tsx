@@ -16,7 +16,10 @@ import { openLocationInGoogleMaps } from "../utils/googleMaps";
 
 /**
  * TODOS:
- * Sort events (today)
+ * Sort events:
+ * Events: Default sort Events in cronological order, startng form PRESENT MOMENT, i.e. show the events today, tomorrow etc....Past Events don't appear in the events list
+ * However Past Events that I have checked into will continue to appear in the Questions Feed top feed. Make the feed order as follows: Chronological (from PRESENT MOMENT), showing ONLY events that I have Checked into, not all events, and at the end of "future" events, add the Past events that I have checked into
+ * Same for the "Ask Question" Page, show events from PRESENT to future (chronological order) and a PAST EVENTS tab (Arguably we should remove this, but I'd like to see if people keep adking questions in an old event page: I was a an event last friday, loved the community, I want to ask a question aybe meet someone from there" - it's to test behaviour
  */
 
 /**
