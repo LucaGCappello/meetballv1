@@ -856,7 +856,7 @@ const SwipeableProfile: React.FC<SwipeableProfileProps> = ({
                         >
                           <EditIcon className="w-4 h-4" />
                         </Button>
-                      )}*
+                      )}
                     </div>
                     {/* TODO: add the virtues and tags here */}
 
