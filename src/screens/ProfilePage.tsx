@@ -51,18 +51,18 @@ import { UserProfileResponse } from "../models";
 
 /**
  * TODOS: User own profile
- * - Hide we met and remember button from user's own profile
+ * - ✅Hide we met and remember button from user's own profile   
  * - Display real data from sign up
- * - Remove edit button that doesn't work
- * - make the funcky sticky notes show the full data
+ * - ✅Remove edit button that doesn't work
+ * - (✓)make the funcky sticky notes show the full data
  */
 
 /**
  * TODOS: User viewsing other people profiles
- * - Hide QR code button
- * - remove we met and remember buttons ONLY FROM HEADER
- * - Remove edit button that doesn't work
- * - make the funcky sticky notes show the full data
+ * - ✅ Hide QR code button
+ * - ✅ remove we met and remember buttons ONLY FROM HEADER
+ * - ❓Remove edit button that doesn't work
+ * - (✓)make the funcky sticky notes show the full data
  */
 
 /**
@@ -793,10 +793,14 @@ const SwipeableProfile: React.FC<SwipeableProfileProps> = ({
                         {profileUser.name[0]}
                       </AvatarFallback>
                     </Avatar>
-                    <Button
+
+
+                  
+                    {/* EDIT PROFILE PIC ON PROFILE VIEW*/}
+                    <Button  
                       size="icon"
                       variant="outline"
-                      className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-white border-2 border-gray-200 hover:bg-gray-50"
+                      className="hidden absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-white border-2 border-gray-200 hover:bg-gray-50"
                     >
                       <EditIcon className="w-4 h-4" />
                     </Button>
@@ -840,17 +844,19 @@ const SwipeableProfile: React.FC<SwipeableProfileProps> = ({
                           </div>
                         )}
                       </div>
+
+                        {/*   EDIT TAGS BUTTON  */}
                       {/* Edit tags button for own profile */}
                       {isOwnProfile && (
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={onEditTags}
-                          className="ml-2 text-gray-500 hover:text-gray-700"
+                          className="hidden ml-2 text-gray-500 hover:text-gray-700"
                         >
                           <EditIcon className="w-4 h-4" />
                         </Button>
-                      )}
+                      )}*
                     </div>
                     {/* TODO: add the virtues and tags here */}
 
@@ -866,7 +872,7 @@ const SwipeableProfile: React.FC<SwipeableProfileProps> = ({
                       <Button
                         onClick={onQRCode}
                         variant="outline"
-                        className="flex-1 flex items-center justify-center gap-2 h-12 text-sm font-medium"
+                        className=" flex-1 flex items-center justify-center gap-2 h-12 text-sm font-medium"
                       >
                         <QrCodeIcon className="w-4 h-4" />
                         QR Code
@@ -918,7 +924,8 @@ const SwipeableProfile: React.FC<SwipeableProfileProps> = ({
                       </Tooltip>
 
                       { }
-                      <Tooltip delayDuration={200}>
+                         {/*QR CODE ON OTHER USERS PROFILE  */}
+                      {/* <Tooltip delayDuration={200} className = "">
                         <TooltipTrigger asChild>
                           <button
                             onClick={onConnect}
@@ -931,7 +938,7 @@ const SwipeableProfile: React.FC<SwipeableProfileProps> = ({
                         <TooltipContent className="action-button-tooltip">
                           Scan QR code to connect
                         </TooltipContent>
-                      </Tooltip>
+                      </Tooltip> */}
 
                       {/* LinkedIn Profile Button */}
                       <Tooltip delayDuration={200}>
@@ -1075,11 +1082,11 @@ const SwipeableProfile: React.FC<SwipeableProfileProps> = ({
                               index % 4 === 0 ? "#FFE066" :
                                 index % 4 === 1 ? "#FF6B6B" :
                                   index % 4 === 2 ? "#4ECDC4" : "#95E1D3"
-                            }
-                            width={80}
-                            height={60}
-                            rotation={index % 2 === 0 ? 5 : -5}
-                            className="text-xs font-semibold"
+                          }
+                           height={95}
+                           rotation={index % 2 === 0 ? 5 : -5}
+                           className="text-xs font-semibold px-2 py-2 break-words leading-tight min-w-[80px] max-w-[140px] aspect-[4/3] 
+                                      flex items-center justify-center text-center"
                           />
                         </div>
                       ))}
@@ -1650,25 +1657,6 @@ export const ProfilePage: React.FC = () => {
               </div>
             )}
 
-            {/* Action buttons in header */}
-            <div className="flex items-center gap-2">
-              <Button
-                onClick={handleWeMet2}
-                size="sm"
-                variant="outline"
-                className="px-3 py-1 h-8 text-xs bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100"
-              >
-                We Met
-              </Button>
-              <Button
-                onClick={handleRemember2}
-                size="sm"
-                variant="outline"
-                className="px-3 py-1 h-8 text-xs bg-yellow-50 border-yellow-200 text-yellow-700 hover:bg-yellow-100"
-              >
-                Remember
-              </Button>
-            </div>
           </div>
         </header>
 

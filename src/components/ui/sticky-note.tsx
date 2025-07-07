@@ -93,18 +93,14 @@ export const StickyNote: React.FC<StickyNoteProps> = ({
     >
       {/* Content container */}
       <div 
-        className="relative z-10 h-full flex flex-col justify-start overflow-hidden"
-        style={{
-          // Ensure text doesn't overflow
-          wordBreak: "break-word",
-          hyphens: "auto",
-        }}
-      >
-        {/* Note content */}
-        <p className="text-gray-800 leading-relaxed">
-          {content}
-        </p>
-      </div>
+  className="relative z-10 h-full w-full flex items-center justify-center text-center px-1"
+  style={{
+    wordBreak: "break-word",
+    hyphens: "auto",
+  }}
+>
+  <p className="text-gray-800 leading-relaxed">{content}</p>
+</div>
       
       {/* Corner curl effect (optional decorative element) */}
       <div
